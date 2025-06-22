@@ -1,0 +1,15 @@
+services:
+  taidoc-api-service:
+    build: .
+    container_name: terramare-heart-api-service
+    ports:
+      # 將主機的 8081 port 映射到容器的 3000 port
+      - "8081:3000"
+    environment:
+      # 告訴容器，這是在正式環境下運行
+      - NODE_ENV=production
+      - TZ=Asia/Taipei # <--- 加入這一行來設定時區為 UTC+8
+    env_file:
+      # 從 .env 檔案中讀取所有環境變數
+      - .env
+    restart: always 

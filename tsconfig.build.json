@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "sourceMap": true,
+    "types": ["node"],
+    "skipLibCheck": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    "src/routes/**/*.ts",
+    "src/utils/**/*.ts",
+    "src/types/**/*.ts",
+    "src/lib/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/__tests__",
+    "src/__mocks__",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "**/setupTests.ts",
+    "**/testUtils.ts",
+    "dist"
+  ]
+} 

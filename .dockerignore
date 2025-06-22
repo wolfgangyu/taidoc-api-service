@@ -1,0 +1,30 @@
+# Version control
+.git
+.gitignore
+
+# Dependencies
+node_modules
+npm-debug.log
+
+# Test files
+src/__tests__
+src/__mocks__
+**/*.test.ts
+**/*.spec.ts
+jest.config.ts
+jest.setup.ts
+**/setupTests.ts
+**/testUtils.ts
+
+# Development files
+.vscode
+.idea
+*.md
+.DS_Store
+
+# Build output
+dist
+
+# Environment variables
+.env
+.env.* 
