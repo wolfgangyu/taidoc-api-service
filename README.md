@@ -4,7 +4,7 @@ This project is a standalone backend microservice dedicated to receiving and pro
 
 ---
 
-## 繁體中文說明
+## 台灣華語說明
 
 ### 簡介
 本專案是一個獨立的後端微服務，採用 Node.js 與 Express.js 框架建置，並透過 Docker 進行容器化，可輕鬆部署於任何支援 Docker 的環境，專門用於接收並處理來自泰博 (TaiDoc) 醫療裝置的數據。
