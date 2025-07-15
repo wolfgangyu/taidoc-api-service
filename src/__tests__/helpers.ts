@@ -14,19 +14,21 @@ export function createTestPatient(config: { group_id?: string; patient_id_extern
   return patient;
 }
 
-// Creates devices with snake_case keys.
-export function createTestDevice(
-  patient_id: string | null,
+// Creates device_bindings with snake_case keys.
+export function createTestDeviceBinding(
+  patient_id: string,
   config: { device_type?: string; device_id?: string; extension_id?: string } = {}
 ) {
-  const device = {
+  const binding = {
     device_type: config.device_type || '3260',
     device_id: config.device_id || 'TEST-DEVICE-001',
     extension_id: config.extension_id || '0',
     patient_id,
+    is_active: true,
+    bound_at: new Date().toISOString(),
   };
-  db.devices.push(device);
-  return device;
+  db.device_bindings.push(binding);
+  return binding;
 }
 
 // Creates a mock Express request that simulates a streaming body.
