@@ -23,7 +23,7 @@ export async function handleAddNewDataRequest(req: Request, res: Response) {
         // We use a simplified normalization now as we don't handle GroupID/PatientID from the device anymore.
         const params = normalizeKeys(parsedParams); 
 
-        const required = ['device_type', 'device_id', 'data_type', 'year', 'month', 'day', 'hour', 'minute', 'second', 'value1', 'gateway_id', 'extension_id'];
+        const required = ['device_type', 'device_id', 'data_type', 'year', 'month', 'day', 'hour', 'minute', 'second', 'value1', 'extension_id'];
         if (required.some(p => params[p] === undefined)) {
             logger.error({ params, missing: required.filter(p => params[p] === undefined) }, '4007: Missing required fields');
             return res.status(400).send(formatErrorResponse('4007'));
